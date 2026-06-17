@@ -1,0 +1,16 @@
+{
+  "name": "جوک Grok",
+  "short_name": "GrokJoke",
+  "description": "جوک روزانه با هوش مصنوعی",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#e94560",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

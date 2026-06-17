@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جوک Grok - خنده روزانه!</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a2e">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container { max-width: 500px; padding: 20px; text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .joke-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+        .btn {
+            background: #e94560;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+        }
+        .btn:hover { transform: translateY(-5px); }
+        .btn:disabled { background: #666; }
+        .ad-banner { margin-top: 30px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 10px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 جوک Grok</h1>
+            <p>جوک‌های بامزه با هوش مصنوعی xAI</p>
+        </header>
+        
+        <div id="joke-container" class="joke-box">
+            <p id="joke-text">دکمه رو بزن تا جوک بشنوی! 😄</p>
+        </div>
+        
+        <button id="new-joke-btn" class="btn">جوک جدید بگیر 😆</button>
+        
+        <div class="share-buttons" style="margin:20px 0;">
+            <button onclick="shareJoke()" style="background:#0f3460; padding:12px 25px; border:none; border-radius:10px; color:white; font-size:1.1rem;">📤 اشتراک‌گذاری</button>
+        </div>
+        
+        <div class="ad-banner">
+            <p style="color:#aaa;">🔥 اینجا تبلیغات نمایش داده می‌شه (بعداً AdSense اضافه کن)</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
