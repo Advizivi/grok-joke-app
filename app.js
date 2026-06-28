@@ -1,4 +1,4 @@
-const BACKEND_URL = 'https://grok-joke-backend-production.up.railway.app';   // ← لینک تو
+const BACKEND_URL = 'https://grok-joke-backend-production.up.railway.app';
 
 async function getNewJoke() {
     const btn = document.getElementById('new-joke-btn');
@@ -13,7 +13,7 @@ async function getNewJoke() {
         if (!response.ok) throw new Error('Server error');
         
         const data = await response.json();
-        jokeText.textContent = data.success ? data.joke : "خطا در دریافت جوک 😅";
+        jokeText.textContent = data.joke || "جوک آماده نشد 😅";
     } catch (error) {
         jokeText.textContent = "اتصال به سرور برقرار نشد. اینترنت رو چک کن.";
         console.error(error);
@@ -25,13 +25,16 @@ async function getNewJoke() {
 
 function shareJoke() {
     const text = document.getElementById('joke-text').textContent;
-    const fullText = "جوک Grok:\n" + text + "\n\nاز اپ جوک Grok";
+    const fullText = text + "\n\nاز اپ جوک Grok:\nhttps://advizivi.github.io/grok-joke-app/";
     
     if (navigator.share) {
-        navigator.share({ title: 'جوک Grok', text: fullText });
+        navigator.share({
+            title: 'جوک Grok',
+            text: fullText
+        });
     } else {
         navigator.clipboard.writeText(fullText).then(() => {
-            alert('جوک کپی شد! حالا شیر کن 😊');
+            alert('جوک + لینک کپی شد! حالا تو واتساپ یا اینستا شیر کن 😊');
         });
     }
 }
