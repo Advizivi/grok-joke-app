@@ -43,17 +43,26 @@
             border-radius: 50px;
             cursor: pointer;
             box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+            width: 100%;
+            margin: 10px 0;
         }
         .btn:hover { transform: translateY(-5px); }
-        .btn:disabled { background: #666; }
-        .ad-banner { margin-top: 30px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 10px; font-size: 0.9rem; }
+        .share-buttons button {
+            background: #0f3460;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.1rem;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>🤖 جوک Grok</h1>
-            <p>جوک‌های بامزه با هوش مصنوعی xAI</p>
+            <p>جوک‌های بامزه با هوش مصنوعی</p>
         </header>
         
         <div id="joke-container" class="joke-box">
@@ -62,12 +71,8 @@
         
         <button id="new-joke-btn" class="btn">جوک جدید بگیر 😆</button>
         
-        <div class="share-buttons" style="margin:20px 0;">
-            <button onclick="shareJoke()" style="background:#0f3460; padding:12px 25px; border:none; border-radius:10px; color:white; font-size:1.1rem;">📤 اشتراک‌گذاری</button>
-        </div>
-        
-        <div class="ad-banner">
-            <p style="color:#aaa;">🔥 اینجا تبلیغات نمایش داده می‌شه (بعداً AdSense اضافه کن)</p>
+        <div class="share-buttons">
+            <button onclick="shareJoke()">📤 اشتراک‌گذاری</button>
         </div>
     </div>
 
